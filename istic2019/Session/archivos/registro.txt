@@ -1,0 +1,7 @@
+{"nombre":"mauricio","contrase\u00f1a":"1234"}
+{"nombre":"mauricioagustin","contrase\u00f1a":"1234"}
+{"nombre":"mauricioagustin","contrase\u00f1a":"1234"}
+{"nombre":"mauricio agustin","contrase\u00f1a":"1234"}
+{"nombre":"pepe","contrase\u00f1a":"1234"}
+{"nombre":"1","contrase\u00f1a":"1"}
+{"nombre":"1","contrase\u00f1a":"1"}

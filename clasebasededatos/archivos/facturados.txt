@@ -1,0 +1,4 @@
+{"Vehiculo":"eir338","fechaEntrada":"29-10-19 17:57","fechaSalida":"29-10-19 18:05","importe":27.833333333333332}
+{"Vehiculo":"eir338","fechaEntrada":"29-10-19 17:57","fechaSalida":"29-10-19 19:12","importe":252.88888888888886}
+{"Vehiculo":"qqq","fechaEntrada":"29-10-19 19:41","fechaSalida":"29-10-19 19:41","importe":0.27777777777777773}
+{"Vehiculo":"a","fechaEntrada":"03-11-19 17:24","fechaSalida":"03-11-19 17:27","importe":9.722222222222223}

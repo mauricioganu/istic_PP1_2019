@@ -17,7 +17,7 @@ if (empty($check) || empty($clave))
 	else
 	{
 			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-			$consulta =$objetoAccesoDato->RetornarConsulta("select nombre, 	clave from usuario");
+			$consulta =$objetoAccesoDato->RetornarConsulta("SELECT `nombre`, `clave` FROM `usuario` ");
 			$consulta->execute();			
 			//$ArrayAsociaticoConDatos= $consulta->fetchAll(PDO::FETCH_ASSOC);		
 			$datos= $consulta->fetchAll(PDO::FETCH_ASSOC);

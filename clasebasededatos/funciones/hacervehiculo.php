@@ -13,7 +13,7 @@ include 'accesoadatos.php';
  //fwrite($archivo, json_encode($miObjeto2)."\n");
  //fclose($archivo);
 $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-			$consulta =$objetoAccesoDato->RetornarConsulta("select patente,  from patentes");
+			$consulta =$objetoAccesoDato->RetornarConsulta("SELECT `patente`FROM `patentes` ");
 			$consulta->execute();			
 			$datos= $consulta->fetchAll(PDO::FETCH_ASSOC);	
 foreach ($datos as $patentes ) {

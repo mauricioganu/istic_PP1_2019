@@ -1,66 +1,63 @@
+
 <?php
 	session_start();
+	include 'accesoADatos.php';
+$check= $_GET['usuario'];
+$clave=$_GET['contraseña'];
 
-	$usuarioIngresado = $_GET['usuario'];
-	$claveIngresada = $_GET['contraseña'];
-	
-	$booUsuario = 0;
-	$booPassword = 0;
 
-	if (empty($usuarioIngresado) || empty($claveIngresada)) 
+//$archivo = fopen("registro.txt", 'r');
+$contador=0;
+
+if (empty($check) || empty($clave)) 
 	{
 		header("Location: ../paginas/login.php?error=camposvacios");
 		exit();
 	}
 	else
 	{
-		//$archivo = fopen("../archivos/registro.txt", "r") or die("Imposible arbrir el archivo");
-	
-		//while(!feof($archivo)) 
-		//{
-		//	$objeto = json_decode(fgets($archivo));
-		$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
+			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
 			$consulta =$objetoAccesoDato->RetornarConsulta("select nombre, 	clave from usuario");
 			$consulta->execute();			
 			//$ArrayAsociaticoConDatos= $consulta->fetchAll(PDO::FETCH_ASSOC);		
 			$datos= $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 			foreach ($datos as $usuario ) {
-				
-			
 
 
-			if ($usuario['nombre'] == $usuarioIngresado) 
-			{	
-				$booUsuario = 1;
-				if ($usuario['clave'] == $claveIngresada)
-				{
-				    $booPassword= 1;
 
-					//fclose($archivo);
-					$_SESSION['usuario']=$objeto->nombre;
-					//$_SESSION['perfil']=$objeto->perfil;
-					//$_COOKIE['cookiename']=$usuarioIngresado;
+//var_dump($usuario);
 
-					header("Location: ../paginas/login.php?exito=signup");
-					exit();
-				}			
-			}
-		 	
-		}	
-		if ($booUsuario == 0) 
-		{
-			header("Location: ../paginas/no.php");
-			exit();
-		}
-		if ($booPassword==0)
-		{
-            header("Location: ../paginas/no.php");
-			exit();
-		}
-			
-		//fclose($archivo);
-		
-	}	
+
+
+
+//while(!feof($archivo)) 
+if ($usuario['nombre'] == $check){
+
+
+	//$objeto = json_decode(fgets($archivo));
 	
+	if ($objeto->Usuario==$check)
+	{	
+		if ($usuario['clave'] == $clave)
+		{
+			$contador=1;
+		}
+		
+	}
+	if ($contador==1)
+	{
+		
+					
+		header("Location:  clasebasededatos/paginas/loginok.php");
+	}
+	else
+	{
+		header("Location: clasebasededatos/paginas/no.php");
+			}
+}
+}
+}
+//fclose($archivo);
+//exit();
 ?>

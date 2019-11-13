@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="imagen.ico">
 
-    <title>ERROR</title>
+    <title></title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -29,6 +29,7 @@
           <ul class="navbar-nav mr-auto">
             
             
+            
           </ul>
           
         </div>
@@ -37,10 +38,10 @@
 
     <!-- Begin page content -->
     <main role="main" class="container">
-     <h1>Error en el ingreso.</h1>
+    <h1>Se ha registrado con éxito su vehiculo</h1>
      
-     <a href="login.php"><em>Reintentar nuevamente.</em></a>
-     <img src="x.jpg" height="800">
+ 	<img src="listo.jpg"height="500">
+
     </main>
 
     <footer class="footer">

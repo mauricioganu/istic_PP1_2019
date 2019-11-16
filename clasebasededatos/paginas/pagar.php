@@ -46,8 +46,8 @@ session_start();
           $salida = $_GET['salida'];
 
           echo "Vehiculo: ".$patente."<br>";
-          echo "Hora de ingreso: ".date("d-m-y H:i",$ingreso)."<br>";
-          echo "Hora de salida: ".date("d-m-y H:i",$salida)."<br>";
+          echo "Hora de ingreso: ".$ingreso."<br>";
+          echo "Hora de salida: ".$salida."<br>";
           echo "Cobrar: $".$cobrar."<br>";
         
 

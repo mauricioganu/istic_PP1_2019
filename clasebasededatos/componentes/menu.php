@@ -1,16 +1,18 @@
 
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#"><?php if(isset($_SESSION['usuario'])){
-                                              echo $_SESSION['usuario'];
-                                            }
-                                            else
-                                            {
-                                             ?>
-                                             Entre y salga despacio S.A
-                                            <?php
-                                            }
-                                            ?></a>
+        <a class="navbar-brand" href="#">
+          <?php if(isset($_SESSION['usuario']))
+          {
+            echo $_SESSION['usuario'];
+        }
+         else
+        {
+       ?>
+         Entre y salga despacio S.A
+        <?php
+       }
+       ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-iconx|"></span>
         </button>
@@ -44,10 +46,13 @@
             <li class="nav-item">
               <a class="nav-link" href="/clasebasededatos/paginas/facturar.php">Facturar Vehiculo</a>
             </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/clasebasededatos/paginas/facturados.php">Vehiculos facturados</a>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" href="/clasebasededatos/paginas/listaUsuarios.php">Listar Usuarios</a>
+              <a class="nav-link" href="/clasebasededatos/paginas/estacionados.php">Vehiculos ingresados</a>
             <li class="nav-item">
-              <a class="nav-link" href="/clasebasededatos/paginas/facturados.php">Listar Vehiculos</a>
+              <a class="nav-link" href="/clasebasededatos/paginas/listaUsuarios.php">Listar usuarios</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/clasebasededatos/funciones/hacerLogout.php">Cerrar Sesion</a>

@@ -17,11 +17,25 @@ session_start();
     <!-- Custom styles for this template -->
     <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../css/floating-labels.css" rel="stylesheet">
+   <!-- <link href="../css/floating-labels.css" rel="stylesheet"> -->
 
   </head>
 
-     
+       <style>
+   
+    th 
+    {
+      color:black;
+      background-color: red;
+    }
+    td {color:black;}
+    table,th,td 
+    {
+     border: 10px solid orange;
+    text-align: center;
+    }
+
+    </style>  
 
   <body>
 
@@ -35,41 +49,56 @@ session_start();
     <main role="main" class="container">
          
     
-     <h1>Usuarios registrados</h1>
-     <br>
 
 
-      
+
+      <table style="width:100%">
+
+       <tr>
+            <th>Listado de usuarios</th>
+           
+          
+            
+          </tr>
 
 
       
 <?php
+include '../funciones/accesoADatos.php';
 
+date_default_timezone_set('America/Argentina/Buenos_Aires');
+$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
+$consulta =$objetoAccesoDato->RetornarConsulta("SELECT  `nombre` FROM `usuario` ");
+$consulta->execute();     
+$datos= $consulta->fetchAll(PDO::FETCH_ASSOC);
+
+
+   
+
+foreach ($datos as $usuario) {
+
+  # code...
+ echo "<tr>";
+        echo "<td>".$usuario['nombre']."</td>";
+        echo "</tr>";
+
+//$totalFacturado = $totalFacturado + $facturados['importe'];
+//$Autos=+ 1;
   
-
-
-
-    $archivo = fopen("../archivos/registro.txt", "r");
-    while(!feof($archivo)) 
-    {
-      $objeto = json_decode(fgets($archivo));
-      if ($objeto != "") 
-      {
-       
-        echo $objeto->nombre ;  
-        echo"<br>"; 
-       
-        
-
-
-        
-      }
-    }
-  
-
-    
-    fclose($archivo);
+      
+                                }
+    echo "</table>";
+ 
+    //echo "<h1> TOTAL FACTURADO: $".$totalFacturado."</h1>";
+    //fclose($archivo);
   ?>
+
+
+
+
+
+
+
 
     </main>
       

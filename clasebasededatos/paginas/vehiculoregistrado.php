@@ -25,32 +25,39 @@ session_start();
 
     <header>
     <?php
-   include "../componentes/menu.php";
+       include "../componentes/menu.php";
     ?>
     </header>
-  </body>
 
     <!-- Begin page content -->
     <main role="main" class="container">
          
        
-       <h1>Se ha registrado correctamente</h1>
-        <img src="https://i0.pngocean.com/files/657/646/363/chroma-key-check-mark-tilde-symbol-green-tick.jpg" width="100" height="100">
-        <br>
+       
         
-          <h1>Ahora puede loguearse</h1>
-          <a href="../paginas/login.php"><h2>Haz click aqui</h2></a>
+         <img src="https://cdn.pixabay.com/photo/2012/04/12/20/12/x-30465_960_720.png "width="100" height="100">
+        <br>
+          <br>
+          <h1>Vehiculo ya registrado, intente nuevamente el ingreso de su patente</h1>
+          <h1>Volver a intentar</h1>
+          <a href="../paginas/ingresovehiculo.php"><h2>Haz click aqui</h2></a>
+
+          
 
     </main>
       
-   
+    <footer class="footer">
+   <!-- <?php
+        //include "componentes/pie.php";
+    ?>
+    </footer> -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" cAlumnorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

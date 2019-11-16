@@ -34,11 +34,8 @@ session_start();
     <main role="main" class="container">
          
        
-       <h1>Se ha registrado con exito su vehiculo</h1>
-        <img src="https://i0.pngocean.com/files/657/646/363/chroma-key-check-mark-tilde-symbol-green-tick.jpg" width="100" height="100">
-        <br>
-        
-         
+       <h1>Error contraseña y usuario inexistente</h1>
+       
 
     </main>
       

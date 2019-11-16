@@ -21,28 +21,94 @@ session_start();
 
   </head>
 
+       <style>
+   
+    th 
+    {
+      color:green;
+      background-color: orange;
+    }
+    td {color:black;}
+    table,th,td 
+    {
+     border: 10px solid white;
+    text-align: center;
+    }
+
+    </style>  
+
   <body>
 
     <header>
     <?php
-   include "../componentes/menu.php";
+        include "../componentes/menu.php";
     ?>
     </header>
-  </body>
 
     <!-- Begin page content -->
     <main role="main" class="container">
          
-       
-       <h1>Se ha registrado con exito su vehiculo</h1>
-        <img src="https://i0.pngocean.com/files/657/646/363/chroma-key-check-mark-tilde-symbol-green-tick.jpg" width="100" height="100">
-        <br>
-        
-         
+    
+
+
+
+      <table style="width:100%">
+
+       <tr>
+            <th>Vehiculo</th>
+            <th>Fecha de ingreso</th>
+          
+            
+          </tr>
+
+
+      
+<?php
+include '../funciones/accesoADatos.php';
+$Autos=0;
+$totalFacturado=0;
+date_default_timezone_set('America/Argentina/Buenos_Aires');
+$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
+$consulta =$objetoAccesoDato->RetornarConsulta("SELECT `id`, `patente`, `f_entrada`, `f_salida`, `importe` FROM `facturados` ");
+$consulta->execute();     
+$datos= $consulta->fetchAll(PDO::FETCH_ASSOC);
+
+
+   
+
+foreach ($datos as $facturados) {
+
+  # code...
+ echo "<tr>";
+        echo "<td>".$facturados['patente']."</td>   <td>".$facturados['f_entrada']."</td>";
+        echo "</tr>";
+
+//$totalFacturado = $totalFacturado + $facturados['importe'];
+//$Autos=+ 1;
+  
+      
+                                }
+    echo "</table>";
+ 
+    //echo "<h1> TOTAL FACTURADO: $".$totalFacturado."</h1>";
+    //fclose($archivo);
+  ?>
+
+
+
+
+
+
+
 
     </main>
       
-   
+     <footer class="footer">
+    <?php
+        include "../componentes/pie.php";
+    ?>
+    </footer>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

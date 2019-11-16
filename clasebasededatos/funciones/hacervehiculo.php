@@ -1,5 +1,5 @@
 <?php
-include 'accesoadatos.php';
+include 'accesoADatos.php';
  $miObjeto = new stdClass();
 
  date_default_timezone_set('America/Argentina/Buenos_Aires');
@@ -13,9 +13,9 @@ include 'accesoadatos.php';
  //fwrite($archivo, json_encode($miObjeto2)."\n");
  //fclose($archivo);
 $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-			$consulta =$objetoAccesoDato->RetornarConsulta("SELECT `patente`FROM `patentes` ");
-			$consulta->execute();			
-			$datos= $consulta->fetchAll(PDO::FETCH_ASSOC);	
+$consulta =$objetoAccesoDato->RetornarConsulta("SELECT `patente`FROM `patentes` ");
+$consulta->execute();			
+$datos= $consulta->fetchAll(PDO::FETCH_ASSOC);	
 foreach ($datos as $patentes ) {
 	if ($patentes["patente"]==$miObjeto->patente) {
 

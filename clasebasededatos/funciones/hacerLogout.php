@@ -1,6 +1,6 @@
 <?php
-	session_start();
+session_start();
 $_SESSION=null;
 session_destroy();
-header("Location: /istic2019/Session/index.php");
+header("Location: /clasebasededatos/index.php");
 ?>

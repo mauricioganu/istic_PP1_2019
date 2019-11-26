@@ -34,7 +34,7 @@ session_start();
     <main role="main" class="container">
          
        
-       <h1>Error contraseña y usuario inexistente</h1>
+       <h1>Error contraseña o usuario inexistente</h1>
        
 
     </main>

@@ -89,8 +89,6 @@ foreach ($datos as $usuario) {
                                 }
     echo "</table>";
  
-    //echo "<h1> TOTAL FACTURADO: $".$totalFacturado."</h1>";
-    //fclose($archivo);
   ?>
 
 

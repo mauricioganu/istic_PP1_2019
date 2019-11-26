@@ -44,8 +44,8 @@ session_start();
         <h1 class="h3 mb-3 font-weight-normal">Registro</h1>
 
       </div>     
-        <input type="text" name="usuario" class="form-control" placeholder="Ingrese Usuario" required autofocus>
-        <input type="password" name="contraseña" class="form-control" placeholder="Ingrese Contraseña" required>
+        <input type="text" name="nombre" class="form-control" placeholder="Ingrese Usuario" required autofocus>
+        <input type="password" name="clave" class="form-control" placeholder="Ingrese Contraseña" required>
 
       <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
       

@@ -48,7 +48,7 @@ session_start();
           echo "Vehiculo: ".$patente."<br>";
           echo "Hora de ingreso: ".$ingreso."<br>";
           echo "Hora de salida: ".$salida."<br>";
-          echo "Cobrar: $".$cobrar."<br>";
+          echo "Debe abonar: $".$cobrar."<br>";
         
 
           ?>

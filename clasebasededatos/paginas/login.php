@@ -43,7 +43,7 @@ session_start();
                   if(isset($_SESSION['usuario'])){
                     //solo muestra el menu si estas con la variable de sesión instaciada
             ?>
-                              <h2>Ya se encuentra logeado</h2>
+                              <h2>Ya se encuentra logueado</h2>
                               <h3>  <?php echo $_SESSION['usuario'];?>  </h3>
 
 

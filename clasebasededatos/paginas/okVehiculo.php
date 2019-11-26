@@ -37,7 +37,7 @@ session_start();
         <img src="https://i0.pngocean.com/files/657/646/363/chroma-key-check-mark-tilde-symbol-green-tick.jpg" width="100" height="100">
         <br>
         
-         <h1>Se ha registrado su vehiculo</h1><br>
+        
         
           <h1>Cargar nueva patente</h1>  <a href="../paginas/ingresoVehiculo.php"><h2>Cargar</h2></a>
 

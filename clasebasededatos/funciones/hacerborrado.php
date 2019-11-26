@@ -1,10 +1,9 @@
 <?php
 include 'accesADdatos.php';
-//$miObjeto = new stdClass();
 $id = $_GET['hacer'];
 $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-$select="DELETE FROM `registrovehiculo` WHERE id=$id";
+$select="DELETE FROM `patentes` WHERE id=$id";
 $consulta =$objetoAccesoDato->RetornarConsulta($select);
 $consulta->execute();
-header("Location: ../paginas/vehiculosenestacionamiento.php");
+header("Location: ../paginas/estacionados.php");
 ?>

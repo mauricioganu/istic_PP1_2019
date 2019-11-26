@@ -1,71 +1,65 @@
-
 <?php
-session_start();
-include 'accesoADatos.php';
-$check= $_GET['usuario'];
-$clave=$_GET['contraseña'];
+    session_start();
+    include 'accesoADatos.php';
+    
+    
 
+	$usuarioIngresado = $_GET['usuario'];
+	$claveIngresada = $_GET['contraseña'];
+	var_dump($claveIngresada);
+	$booUsuario = 0;
+	$booPassword = 0;
 
-//$archivo = fopen("registro.txt", 'r');
-
-//$contador=0;
-$banderausuario=0;
-$banderacontraseña=0;
-if (empty($check) || empty($clave)) 
+	if (empty($usuarioIngresado) || empty($claveIngresada)) 
 	{
 		header("Location: ../paginas/login.php?error=camposvacios");
 		exit();
 	}
-			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-			$consulta =$objetoAccesoDato->RetornarConsulta("SELECT  `nombre`, `clave` FROM `usuario` ");
+	else
+	{
+		$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
+			$consulta =$objetoAccesoDato->RetornarConsulta("select nombre  , clave   from usuario");
 			$consulta->execute();			
-			//$ArrayAsociaticoConDatos= $consulta->fetchAll(PDO::FETCH_ASSOC);		
 			$datos= $consulta->fetchAll(PDO::FETCH_ASSOC);
-
-	//var_dump($datos);
-
-
-
+		//$archivo = fopen("../archivos/registro.txt", "r") or die("Imposible arbrir el archivo");
 	
-	
-			
-
-foreach ($datos as $usuario ) 
-{
-
-	if ($usuario["nombre"] == $check )
+		//while(!feof($archivo)) 
+		foreach ($datos as $usuario) 
 		{
-			//echo "entro foreach";
-			//die;
+			//$objeto = json_decode(fgets($archivo));
+			if ($usuario["nombre"] == $usuarioIngresado) 
+			{	
+				$booUsuario = 1;
+				if ($usuario["clave"] == $claveIngresada)
+				{
+				    $booPassword= 1;
 
-			$banderausuario=1;
+					//fclose($archivo);
+					$_SESSION['usuario']=$usuario["nombre"];
+					$_SESSION['perfil']=$usuario["perfil"];
+					//$_COOKIE['cookiename']=$usuarioIngresado;
+					setcookie("cookie", $_SESSION['usuario']);
 
-			//header("Location: ../paginas/ok.php");
-			//exit();
-
-		}
-	if ($usuario["clave"]== $clave)
+					header("Location: ../paginas/login.php?exito=signup");
+					exit();
+				}			
+			}
+		 	
+		}	
+		if ($booUsuario == 0) 
 		{
-			$banderausuario=1;
-			$_SESSION["usuario"]= $usuario["nombre"];
-			setcookie("cookie", $_SESSION['usuario']);
-			header ("Location: /clasebasededatos/index.php" );
+			header("Location:../paginas/usuarionoregistrado.php");
 			exit();
 		}
-
-
-
-
+		if ($booPassword == 0)
+		{
+            header("Location:../paginas/usuarionoregistrado.php");
+			exit();
+		}
+			
+		//fclose($archivo);
 		
-}
-if ($banderausuario==0)
-{
-	header ("Location:../paginas/usuarionoregistrado.php" );
-}
-if ($banderacontraseña==0)
-{
-	header ("Location:../paginas/usuarionoregistrado.php" );
-}
-
-
+	}	
+	
+	
 ?>

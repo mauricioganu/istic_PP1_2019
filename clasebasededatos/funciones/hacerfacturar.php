@@ -1,6 +1,6 @@
 <?php
 include 'accesoADatos.php';
-$precio=100;
+$precio=1;
 $patentenueva = $_GET['patente'];
 $bandera=0;
 
@@ -22,7 +22,7 @@ foreach ($datos as $patentes ) {
 
         $tiempo = $horaSalida - $patentes['hora_ingreso'];
 
-        $cobrar = ($tiempo / 60 /60) * $precio;
+        $cobrar = $tiempo/60  * $precio;
     
 
         $Facturado = new stdClass();
@@ -61,6 +61,13 @@ if ($bandera==0)
   exit();
 }
 ?>
+
+
+
+
+
+
+
 
 
 

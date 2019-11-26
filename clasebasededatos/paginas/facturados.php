@@ -90,7 +90,7 @@ $Autos=+ 1;
                                 }
     echo "</table>";
  
-    echo "<h1> TOTAL FACTURADO: $".$totalFacturado."</h1>";
+    echo "<h1><em> TOTAL FACTURADO: $".$totalFacturado."</em></h1>";
     //fclose($archivo);
   ?>
 

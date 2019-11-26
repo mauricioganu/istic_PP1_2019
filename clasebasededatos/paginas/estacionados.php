@@ -55,7 +55,7 @@ session_start();
       <table style="width:100%">
 
        <tr>
-            <th>Vehiculo</th>
+            <th>Patente</th>
             <th>Fecha de ingreso</th>
           
             
@@ -69,18 +69,18 @@ $Autos=0;
 $totalFacturado=0;
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-$consulta =$objetoAccesoDato->RetornarConsulta("SELECT `id`, `patente`, `f_entrada`, `f_salida`, `importe` FROM `facturados` ");
+$consulta =$objetoAccesoDato->RetornarConsulta("SELECT id,patente,hora_ingreso from patentes");
 $consulta->execute();     
 $datos= $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 
    
 
-foreach ($datos as $facturados) {
+foreach ($datos as $patentes) {
 
   # code...
  echo "<tr>";
-        echo "<td>".$facturados['patente']."</td>   <td>".$facturados['f_entrada']."</td>";
+        echo "<td>".$patentes['patente']."</td>   <td>".$patentes['hora_ingreso']."</td>";
         echo "</tr>";
 
 //$totalFacturado = $totalFacturado + $facturados['importe'];

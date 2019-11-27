@@ -40,7 +40,7 @@ session_start();
                               <label for="inputEmail" class="sr-only">Patente</label>
                               <input type="text" id="patente"  name="patente"class="form-control" placeholder="Ingrese su patente" required autofocus>
                              
-                              <button class="btn btn-lg btn-primary btn-block" type="submit">Facturar</button>
+                              <button class="image"  type="submit"><img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVSNwqA3bsRTg3OuFK2t3p231ehZd8CCLBtU2LoKuu0gC_Vjtv&s" width="375" height="80"></button>
                               
                               </form>
                             

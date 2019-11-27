@@ -43,7 +43,9 @@ session_start();
           <a href="../paginas/login.php"><h2>Haz click aqui</h2></a> -->
 
           <h1>Registrarse nuevamente</h1>
-          <a href="../paginas/registro.php"><h2>Registro</h2></a>
+          <button class="image"  type="submit"><img src ="https://png.pngtree.com/png-vector/20190122/ourlarge/pngtree-red-stereoscopic-down-arrow-creative-png-image_527227.jpg" width="375" height="80" ><a href="../paginas/registro.php"><h2>Volver</h2></a>
+          </button>
+          
 
     </main>
       

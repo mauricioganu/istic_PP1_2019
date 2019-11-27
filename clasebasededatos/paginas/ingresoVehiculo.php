@@ -41,7 +41,7 @@ session_start();
                               <input type="text" id="patente"  name="patente"class="form-control" placeholder="Ingrese su patente" required autofocus>
                              
                               
-                              <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+                              <button class="image"  type="submit"><img src ="https://pngimage.net/wp-content/uploads/2018/05/boton-ingresar-png-2.png" width="375" height="80"></button>
                               
                               </form>
                             

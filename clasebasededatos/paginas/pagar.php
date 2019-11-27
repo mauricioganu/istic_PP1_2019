@@ -33,8 +33,9 @@ session_start();
     <main role="main" class="container">
          
       <form action="hacerfacturar.php"> 
+        
+      <h1><em><m>Su factura es</m></em> </h1>
 
-      <h1>Cobrar</h1>
 
       <?php
 
@@ -54,14 +55,15 @@ session_start();
           ?>
             <br>
             <br>
-            <a href="../paginas/facturar.php"><h4>Facturar Otro Vehiculo</h4></a>
-            <a href="../index.php"><h4>Volver al Inicio</h4></a>
+
+         <!--   <a href="../paginas/facturar.php"><h4>Facturar Otro Vehiculo</h4></a>
+            <a href="../index.php"><h4>Volver al Inicio</h4></a> -->
         
     </main>
       
      <footer class="footer">
     <?php
-        include "componentes/pie.php";
+        include "../componentes/pie.php";
     ?>
     </footer>
 

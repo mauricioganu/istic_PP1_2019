@@ -66,7 +66,7 @@ session_start();
                                   <input type="checkbox" value="remember-me"> Recordarme
                                 </label>
                               </div>
-                              <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+                              <button class="image"  type="submit"><img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9AEhsQ9_86bPh-c7f76-4rfTRCj1oik2Mcb2LRuLDIjK5K9_g&s" width="375" height="80"></button>
                              
                               </form>
                             

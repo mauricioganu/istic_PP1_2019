@@ -17,22 +17,33 @@ session_start();
     <!-- Custom styles for this template -->
     <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../css/floating-labels.css" rel="stylesheet">
-
+   
+    <link href="../css/3.css" rel="stylesheet">
   </head>
 
        <style>
    
     th 
     {
-      color:green;
-      background-color: orange;
+      color:black;
+      background-color: chocolate;
+      font-size: 20 px;
+      font-family: showcard;
+      font-style: italic;
     }
     td {color:black;}
     table,th,td 
     {
-     border: 10px solid white;
+      color:black;
+      
+      font-size: 20 px;
+      font-family: showcard;
+      font-style: italic;
+
+
+     border: 5px solid black;
     text-align: center;
+    background-color: chocolate;
     }
 
     </style>  

@@ -8,6 +8,19 @@
 ?>
 
 <div class="container">
+	<style>
+		span
+		{
+
+        color:black;
+      
+      font-size: 20 px;
+      font-family: showcard;
+      font-style: italic;
+      text-align: center;
+            }
+         </style>
+		
         <span class="text-muted">Bienvenido   <?php echo $_SESSION['usuario'];?>   </span>  <span class="text-muted">otro datos como fecha y hora de ingreso, total de autos estacionados <?php //if(isset($_SESSION['estacionados'])){echo $_SESSION['estacionados'];}?>, datos que todo el tiempo deben estar en pantalla</span>
 </div>
 

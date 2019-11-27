@@ -17,7 +17,7 @@ session_start();
     <!-- Custom styles for this template -->
     <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../css/floating-labels.css" rel="stylesheet">
+    <link href="../css/3.css" rel="stylesheet">
 
   </head>
 
@@ -25,14 +25,25 @@ session_start();
    
     th 
     {
-      color:blue;
-      background-color: white;
+     color:black;
+      background-color: chocolate;
+      font-size: 20 px;
+      font-family: showcard;
+      font-style: italic;
     }
     td {color:brown;}
     table,th,td 
     {
-     border: 10px solid blue;
+     color:black;
+      
+      font-size: 20 px;
+      font-family: showcard;
+      font-style: italic;
+
+
+     border: 5px solid black;
     text-align: center;
+    background-color: chocolate;
     }
 
     </style>  
@@ -59,10 +70,9 @@ session_start();
             <th>Fecha/Hora Ingreso</th>
             <th>Fecha/Hora Salida</th>
             <th>Total Cobrado</th>
+
           </tr>
-
-
-      
+ 
 <?php
 include '../funciones/accesoADatos.php';
 $Autos=0;
@@ -89,8 +99,14 @@ $Autos=+ 1;
       
                                 }
     echo "</table>";
- 
-    echo "<h1><em> TOTAL FACTURADO: $".$totalFacturado."</em></h1>";
+  
+
+    echo  "<p style='color:black;
+      background-color: chocolate;
+      font-size: 20 px;
+      font-family: showcard;
+      font-style: italic;border: 5px solid black;
+    text-align: center';> TOTAL FACTURADO: $".$totalFacturado."</p>";
     //fclose($archivo);
   ?>
 

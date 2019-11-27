@@ -17,7 +17,8 @@ session_start();
     <!-- Custom styles for this template -->
     <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-   <!-- <link href="../css/floating-labels.css" rel="stylesheet"> -->
+    <!--<link href="../css/floating-labels.css" rel="stylesheet"> -->
+    <link href="../css/3.css" rel="stylesheet"> 
 
   </head>
 
@@ -26,14 +27,29 @@ session_start();
     th 
     {
       color:black;
-      background-color: red;
+      background-color: chocolate;
+      font-size: 20 px;
+      font-family: showcard;
+      font-style: italic;
     }
     td {color:black;}
     table,th,td 
     {
-     border: 10px solid orange;
+
+      color:black;
+      
+      font-size: 20 px;
+      font-family: showcard;
+      font-style: italic;
+
+
+     border: 5px solid black;
     text-align: center;
+    background-color: chocolate;
     }
+
+
+   
 
     </style>  
 
@@ -102,7 +118,7 @@ foreach ($datos as $usuario) {
       
      <footer class="footer">
     <?php
-        include "../componentes/pie.php";
+  //      include "../componentes/pie.php";
     ?>
     </footer>
 

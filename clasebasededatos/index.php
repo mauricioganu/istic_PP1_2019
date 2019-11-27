@@ -18,11 +18,11 @@ session_start();
     <!-- Custom styles for this template -->
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/floating-labels.css" rel="stylesheet">
+    <link href="css/3.css" rel="stylesheet">
 
   </head>
 
-  <body>
+  <body style, img src="https://modauto-tuning.com/11522-large_default/volante-desplazado-terciopelo-negro.jpg" >
 
     <header>
     <?php
@@ -32,7 +32,16 @@ session_start();
 
     <!-- Begin page content -->
     <main role="main" class="container">
-         
+         <style>
+            h1{
+                color:black;
+      
+      font-size: 20 px;
+      font-family: showcard;
+      font-style: italic;
+      text-align: center;
+            }
+         </style>
        <h1 class="mt-5">Entre y salga despacio S.A</h1>
       <img src="https://www.cronica.com.ar/__export/1563296665268/sites/cronica/img/2019/07/16/54c8aeb360cff_1420_x_crop1563296410840.jpg_1734428432.jpg" > 
     </main>

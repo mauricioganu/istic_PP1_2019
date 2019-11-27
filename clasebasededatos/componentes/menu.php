@@ -1,18 +1,18 @@
 
       <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top "style="background-color: chocolate;font-size: 20px;font-family:showcard ;font-style:italic;  ">
         <a class="navbar-brand" href="#">
-          <?php if(isset($_SESSION['usuario']))
-          {
-            echo $_SESSION['usuario'];
-        }
-         else
-        {
-       ?>
-         Entre y salga despacio S.A
-        <?php
-       }
-       ?></a>
+<?php if(isset($_SESSION['usuario']))
+ {
+  echo $_SESSION['usuario'];
+  }
+   else
+  {
+  ?>
+   Entre y salga despacio S.A
+  <?php
+   }
+    ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-iconx|"></span>
         </button>

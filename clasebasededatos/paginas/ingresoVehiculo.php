@@ -36,6 +36,16 @@ session_start();
 
                               <form class="form-signin" action="../funciones/hacervehiculo.php">
                               
+                               <style>
+                                       h1,input{
+                                              color:black;
+      
+                                                font-size: 20 px;
+                                                   font-family: showcard;
+                                                    font-style: italic;
+                                                   text-align: center;
+                                               }
+         </style>
                               <h1 class="h3 mb-3 font-weight-normal">Ingrese patente del vehiculo</h1>
                               <label for="inputEmail" class="sr-only">Patente</label>
                               

@@ -38,7 +38,8 @@ session_start();
                               
                               <h1 class="h3 mb-3 font-weight-normal">Facturar vehiculo</h1>
                               <label for="inputEmail" class="sr-only">Patente</label>
-                              <input type="text" id="patente"  name="patente"class="form-control" placeholder="Ingrese su patente" required autofocus>
+                             
+                              <input type="text" id="patente"  name="patente" pattern="([a-zñ]{3}\d{3}|[a-zñ]{2}\d{3}[a-zñ]{2})$" class="form-control" placeholder="aaa111 / aa123aa" required autofocus>
                              
                               <button class="image"  type="submit"><img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVSNwqA3bsRTg3OuFK2t3p231ehZd8CCLBtU2LoKuu0gC_Vjtv&s" width="375" height="80"></button>
                               
